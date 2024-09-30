@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:elevation="10dp"
+            android:layout_gravity="center"
+            android:foregroundTint="@color/yellow_A400"
+            android:indeterminateTint="@color/yellow_A400"
+            android:progressTint="@color/yellow_A400"
+            android:backgroundTint="@color/yellow_A400"
+            android:id="@+id/progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+        
+        <FrameLayout
+            android:visibility="invisible"
+            android:elevation="10dp"
+            android:background="@color/overlay_dark_20"
+            android:id="@+id/id_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/id_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/id_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_weight="1"
+                    android:id="@+id/id_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                </WebView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

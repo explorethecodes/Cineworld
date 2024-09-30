@@ -1,0 +1,141 @@
+[
+  {
+    "id": 13,
+    "name": "Tom Hardy",
+    "birth_year": 1977,
+    "nationality": "British",
+    "description": "Tom Hardy is a British actor known for his intense and captivating performances in various films.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/220px-Tom_Hardy_by_Gage_Skidmore.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Shah Rukh Khan",
+    "birth_year": 1965,
+    "nationality": "Indian",
+
+    "description": "Shah Rukh Khan, also known as SRK, is an Indian actor known as the 'King of Bollywood' for his contributions to Indian cinema.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Chris Hemsworth",
+    "birth_year": 1983,
+    "nationality": "Australian",
+    "description": "Chris Hemsworth is an Australian actor known for his portrayal of Thor in the Marvel Cinematic Universe and his roles in various action films.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg/220px-Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Denzel Washington",
+    "birth_year": 1954,
+    "nationality": "American",
+
+    "description": "Denzel Washington is an American actor known for his powerful and versatile performances in a wide range of films.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Denzel_Washington_2018.jpg/220px-Denzel_Washington_2018.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tom Hanks",
+    "birth_year": 1956,
+    "nationality": "American",
+
+    "description": "Tom Hanks is an American actor and filmmaker known for his heartwarming performances in various acclaimed films.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/220px-Tom_Hanks_TIFF_2019.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Robert De Niro",
+    "birth_year": 1943,
+    "nationality": "American",
+    "description": "Robert De Niro is an American actor, producer, and director known for his intense performances and collaborations with Martin Scorsese.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Robert_De_Niro_Cannes_2016_2.jpg/220px-Robert_De_Niro_Cannes_2016_2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Al Pacino",
+    "birth_year": 1940,
+    "nationality": "American",
+    "description": "Al Pacino is an American actor and filmmaker known for his intense and iconic performances. He is considered one of the greatest actors in film history.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Al_Pacino_2016_%2830401544240%29.jpg/220px-Al_Pacino_2016_%2830401544240%29.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jack Nicholson",
+    "birth_year": 1937,
+    "nationality": "American",
+
+    "description": "Jack Nicholson is an American actor and filmmaker known for his distinctive voice and memorable performances in various genres.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jack_Nicholson_2001.jpg/220px-Jack_Nicholson_2001.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sean Connery",
+    "birth_year": 1930,
+    "death_year": 2020,
+    "nationality": "Scottish",
+
+    "description": "Sean Connery was a Scottish actor known for portraying the iconic character James Bond and his memorable performances in various films.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sean_Connery_%281983%29.jpg/220px-Sean_Connery_%281983%29.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Russell Crowe",
+    "birth_year": 1964,
+    "nationality": "New Zealand",
+
+    "description": "Russell Crowe is a New Zealand actor known for his powerful and commanding presence on screen.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Russell_Crowe_%2833994020424%29.jpg/220px-Russell_Crowe_%2833994020424%29.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Robert Duvall",
+    "birth_year": 1931,
+    "nationality": "American",
+
+    "description": "Robert Duvall is an American actor known for his memorable and critically acclaimed performances.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Robert_Duvall_1.jpg/220px-Robert_Duvall_1.jpg"
+  },
+
+  {
+    "id": 11,
+    "name": "Anthony Hopkins",
+    "birth_year": 1937,
+    "nationality": "British",
+
+    "description": "Anthony Hopkins is a Welsh actor known for his powerful and compelling performances in both film and stage.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/AnthonyHopkins10TIFF.jpg/220px-AnthonyHopkins10TIFF.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Dustin Hoffman",
+    "birth_year": 1937,
+    "nationality": "American",
+
+    "description": "Dustin Hoffman is an American actor known for his versatility and exceptional performances in a wide range of roles.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dustin_Hoffman_Quartet_avp_2013_2.jpg/220px-Dustin_Hoffman_Quartet_avp_2013_2.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tommy Lee Jones",
+    "birth_year": 1946,
+    "nationality": "American",
+    "description": "Tommy Lee Jones is an American actor known for his powerful and stoic portrayals of various characters.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tommy_Lee_Jones_2017.jpg/220px-Tommy_Lee_Jones_2017.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Leonardo DiCaprio",
+    "birth_year": 1974,
+    "nationality": "American",
+    "description": "Leonardo DiCaprio is an American actor and environmental activist known for his dedication to his craft and socially conscious roles.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Leonardo_Dicaprio_Cannes_2019.jpg/220px-Leonardo_Dicaprio_Cannes_2019.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Morgan Freeman",
+    "birth_year": 1937,
+    "nationality": "American",
+    "description": "Morgan Freeman is an American actor known for his powerful and authoritative presence on screen.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Morgan_Freeman_at_The_Pentagon_on_2_August_2023_-_230802-D-PM193-3363_%28cropped%29.jpg/220px-Morgan_Freeman_at_The_Pentagon_on_2_August_2023_-_230802-D-PM193-3363_%28cropped%29.jpg"
+  }
+]

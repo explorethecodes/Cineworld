@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="data"
+            type="com.capco.widgets.flips.FlipsItem"/>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_900">
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/grey_900"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/id_scroll_to_top"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="20dp"
+                            android:layout_marginTop="40dp"
+                            app:cardBackgroundColor="@color/overlay_dark_40"
+                            android:elevation="5dp">
+
+                            <ImageView
+                                android:padding="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_arrow_top_double"
+                                app:tint="@color/grey_10"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:elevation="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:background="@color/overlay_dark_10"/>
+
+                        <ImageView
+                            tools:src="@color/overlay_dark_20"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="300dp"
+                            android:minHeight="250dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:textSize="26sp" />
+
+                        <LinearLayout
+                            android:id="@+id/id_source_time_layout"
+                            android:background="@drawable/gradient_shade_bottom"
+                            android:layout_gravity="bottom"
+                            android:paddingStart="7dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:gravity="top"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="@{`By `+ data.source}"
+                                android:layout_marginStart="10dp"
+                                android:paddingStart="7dp"
+                                android:paddingEnd="7dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:background="@color/yellow_A400"
+                                android:textColor="@color/black"
+                                tools:text="GoodReturns"
+                                android:gravity="right"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:id="@+id/id_source"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="@{data.time+ ` Ago`}"
+                                android:textColor="@color/white"
+                                android:paddingStart="10dp"
+                                android:gravity="left"
+                                tools:text="10 min ago"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:id="@+id/id_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:background="@color/grey_900"
+                        android:text="@{data.title}"
+                        android:id="@+id/id_title"
+                        android:textColor="@color/grey_20"
+                        tools:text="Retail Shareholding In NSE Listed Companies Hits All Time High Of 7.32 Percent"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:padding="15dp"/>
+
+                    <TextView
+                        android:textColor="@color/grey_20"
+                        android:id="@+id/id_description"
+                        android:text="@{data.description}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/grey_900"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:text="The share of retail investors in NSE- listed companies has reached an all-time high of 7.32 per cent in December 2021, and in rupee terms it has touched a record high of Rs 18.98 lakh crore, says a report. However, there was an overall fall in institutional shareholding, largely due to the massive Rs 38,521 crore net outflows from foreign portfolio investors, MSME" />
+
+                    <TextView
+                        android:background="@color/overlay_dark_30"
+                        android:padding="2dp"
+                        android:textColor="@color/grey_20"
+                        android:text="Swipe Up/Down"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:id="@+id/id_category_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:background="@color/overlay_dark_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_margin="1dp"
+                        android:background="@color/grey_900"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:id="@+id/id_read_more"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:tint="@color/grey_20"
+                            app:tint="@color/grey_20"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_read_more"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:textColor="@color/grey_20"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Read more"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_margin="1dp"
+                        android:background="@color/grey_900"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:id="@+id/id_share"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:tint="@color/grey_20"
+                            app:tint="@color/grey_20"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_share"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/grey_20"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Share"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>
