@@ -66,6 +66,9 @@ SOLID principles with clean code architecture
 
 Support Modules (Modular Approach)
 ```
+![MVVM_1](files/images/mvvm1.jpg)
+
+![MVVM_2](files/images/mvvm2.jpg)
 
 ## Public APIs Used
 ### The Movie Data Base (TMDB)
