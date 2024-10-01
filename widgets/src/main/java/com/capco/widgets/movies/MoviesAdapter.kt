@@ -37,7 +37,7 @@ class MoviesAdapter(var context : Context, var movies: ArrayList<MoviesItem>, pr
         binding.root.setOnClickListener { onClickListener.onClick(movie) }
 
         movie.poster?.let {
-            val placeHolder = ContextCompat.getDrawable(context,R.drawable.ic_camera_movie)
+//            val placeHolder = ContextCompat.getDrawable(context,R.drawable.ic_camera_movie)
             binding.movieImage.loadImage(it) {
             }
         }
