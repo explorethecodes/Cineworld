@@ -50,7 +50,7 @@ View Binding
 
 Data Binding
 
-Hilt Dependency Injection`
+Hilt Dependency Injection
 
 Coroutines
 
@@ -66,9 +66,9 @@ SOLID principles with clean code architecture
 
 Support Modules (Modular Approach)
 ```
-![MVVM_1](files/images/mvvm1.jpg)
+![MVVM_1](files/images/mvvm1.webp)
 
-![MVVM_2](files/images/mvvm2.jpg)
+![MVVM_2](files/images/mvvm2.png)
 
 ## Public APIs Used
 ### The Movie Data Base (TMDB)
