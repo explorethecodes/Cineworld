@@ -4,18 +4,15 @@ import com.capco.cineworld.data.network.AppNetwork.BASE_URL_IMAGE
 import com.capco.widgets.flips.FlipsItem
 
 class ArticlesData(private var response: ArticlesResponse){
-
     fun isSuccess(): Boolean {
         return true
     }
-
     fun getError() : Exception {
         response.statusMessage?.let {
             return Exception(it)
         }
         return Exception("Unknown error")
     }
-
     fun getArticles() : List<FlipsItem>? {
         return response.results?.map {
             it.toFlipsItem()

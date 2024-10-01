@@ -3,6 +3,7 @@ package com.capco.cineworld.ui.detail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.capco.cineworld.data.network.CallCode
 import com.capco.cineworld.data.network.api.NetworkCallListener
 import com.capco.cineworld.data.network.models.movie.MovieResponse
 import com.capco.cineworld.data.network.models.movie.MovieRequest
@@ -29,6 +30,7 @@ class DetailViewModel @Inject constructor(private val repository: DetailReposito
         }
     }
     private fun validateMovie(): Boolean{
+        movieRequest.callCode =CallCode.MOVIE
         return movieRequest.id != null
     }
 

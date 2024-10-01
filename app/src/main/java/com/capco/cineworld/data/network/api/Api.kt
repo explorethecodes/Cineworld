@@ -24,28 +24,24 @@ interface Api {
     //------------------------------ MOVIES NOW PLAYING-----------------------------------------//
     @GET("movie/now_playing")
     suspend fun moviesNowPlaying(
-        @Query("page",encoded = true) page : String
     ) : Response<MoviesResponse>
 
     //------------------------------ MOVIES TOP RATED -----------------------------------------//
     @GET("movie/top_rated")
     suspend fun moviesTopRated(
-        @Query("page",encoded = true) page : String
     ) : Response<MoviesResponse>
 
     //------------------------------ MOVIES TRENDING -----------------------------------------//
     @GET("movie/popular")
     suspend fun moviesTrending(
-        @Query("page",encoded = true) page : String
     ) : Response<MoviesResponse>
 
     //------------------------------- MOVIES UPCOMING-----------------------------------------//
     @GET("movie/upcoming")
     suspend fun moviesUpcoming(
-        @Query("page",encoded = true) page : String
     ) : Response<MoviesResponse>
 
-    //--------------------------------- PERSONS -----------------------------------------//
+    //--------------------------------- ARTISTS -----------------------------------------//
     @GET("person/popular")
     suspend fun artists(
         @Query("page",encoded = true) page : String

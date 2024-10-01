@@ -3,6 +3,7 @@ package com.capco.cineworld.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.capco.cineworld.data.network.CallCode
 import com.capco.cineworld.data.network.api.NetworkCallListener
 import com.capco.cineworld.data.network.models.artists.ArtistsRequest
 import com.capco.cineworld.data.network.models.artists.ArtistsResponse
@@ -29,7 +30,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository) 
         }
     }
     private fun validateMoviesNowPlaying(): Boolean{
-        moviesNowPlayingRequest.page = 1.toString()
+        moviesNowPlayingRequest.callCode = CallCode.MOVIES_NOW_PLAYING
         return true
     }
 
@@ -45,7 +46,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository) 
         }
     }
     private fun validateMoviesTopRated(): Boolean{
-        moviesTopRatedRequest.page = 1.toString()
+        moviesTopRatedRequest.callCode = CallCode.MOVIES_TOP_RATED
         return true
     }
 
@@ -61,7 +62,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository) 
         }
     }
     private fun validateMoviesTrending(): Boolean{
-        moviesTrendingRequest.page = 1.toString()
+        moviesTrendingRequest.callCode = CallCode.MOVIES_TRENDING
         return true
     }
 
@@ -77,7 +78,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository) 
         }
     }
     private fun validateMoviesUpcoming(): Boolean{
-        moviesUpcomingRequest.page = 1.toString()
+        moviesUpcomingRequest.callCode = CallCode.MOVIES_UPCOMING
         return true
     }
 

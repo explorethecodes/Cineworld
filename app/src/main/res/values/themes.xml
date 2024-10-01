@@ -19,4 +19,33 @@
         <item name="android:fontFamily">@font/lato</item>
     </style>
 
+    <style name="Theme.Cineworld.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Cineworld.NoActionBar.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Status bar color. -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="Theme.Cineworld.NoActionBar.Black">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Status bar color. -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor" >@color/overlay_dark_90</item>
+        <item name="android:navigationBarColor">@color/overlay_dark_90</item>
+    </style>
+
 </resources>

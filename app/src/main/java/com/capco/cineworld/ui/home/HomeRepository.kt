@@ -26,7 +26,7 @@ class HomeRepository @Inject constructor(private val api: Api, private val appPr
                 networkCallListener?.onNetworkCallStarted(CallInfo(callCode = request.callCode))
 
                 val moviesResponse = apiRequest {
-                    api.moviesNowPlaying(request.page!!)}
+                    api.moviesNowPlaying()}
                 callback(moviesResponse)
 
                 networkCallListener?.onNetworkCallSuccess(CallInfo(callCode = request.callCode))
@@ -47,7 +47,7 @@ class HomeRepository @Inject constructor(private val api: Api, private val appPr
             try {
                 networkCallListener?.onNetworkCallStarted(CallInfo(callCode = request.callCode))
 
-                val moviesResponse = apiRequest { api.moviesTopRated(request.page!!)}
+                val moviesResponse = apiRequest { api.moviesTopRated()}
                 callback(moviesResponse)
 
                 networkCallListener?.onNetworkCallSuccess(CallInfo(callCode = request.callCode))
@@ -68,7 +68,7 @@ class HomeRepository @Inject constructor(private val api: Api, private val appPr
             try {
                 networkCallListener?.onNetworkCallStarted(CallInfo(callCode = request.callCode))
 
-                val moviesResponse = apiRequest { api.moviesTrending(request.page!!)}
+                val moviesResponse = apiRequest { api.moviesTrending()}
                 callback(moviesResponse)
 
                 networkCallListener?.onNetworkCallSuccess(CallInfo(callCode = request.callCode))
@@ -89,7 +89,7 @@ class HomeRepository @Inject constructor(private val api: Api, private val appPr
             try {
                 networkCallListener?.onNetworkCallStarted(CallInfo(callCode = request.callCode))
 
-                val moviesResponse = apiRequest { api.moviesUpcoming(request.page!!)}
+                val moviesResponse = apiRequest { api.moviesUpcoming()}
                 callback(moviesResponse)
 
                 networkCallListener?.onNetworkCallSuccess(CallInfo(callCode = request.callCode))
