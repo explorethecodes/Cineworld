@@ -3,6 +3,7 @@ package com.capco.cineworld.utils
 import android.app.Activity
 import android.content.Intent
 import com.capco.cineworld.ui.detail.DetailActivity
+import com.capco.cineworld.ui.detail.genre.GenreActivity
 import com.capco.widgets.flips.FlipsActivity
 import com.capco.widgets.flips.FlipsWidgetData
 import com.capco.widgets.image.ImageActivity
@@ -23,5 +24,11 @@ fun Activity.startImageActivity(imageUrl : String){
 fun Activity.startDetailActivity(id : String){
     val intent = Intent(this, DetailActivity::class.java)
     intent.putExtra("id",id)
+    startActivity(intent)
+}
+
+fun Activity.startGenreActivity(genre : String){
+    val intent = Intent(this, GenreActivity::class.java)
+    intent.putExtra("genre",genre)
     startActivity(intent)
 }

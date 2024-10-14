@@ -1,4 +1,4 @@
-package com.capco.cineworld.ui.detail
+package com.capco.cineworld.ui.detail.articles
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

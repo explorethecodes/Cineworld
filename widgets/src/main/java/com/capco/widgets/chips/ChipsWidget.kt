@@ -28,18 +28,24 @@ class ChipsWidget : LinearLayout {
             true
         )
     }
-    constructor(context: Context, data: ChipsWidgetData) : this(context, null){
-        construct(data)
+    constructor(context: Context, data: ChipsWidgetData,onClickListener: ChipsWidgetOnClickListener) : this(context, null){
+        construct(data,onClickListener)
     }
 
-    fun construct(data: ChipsWidgetData) {
+    fun construct(data: ChipsWidgetData, onClickListener: ChipsWidgetOnClickListener) {
         setData(data)
+        setOnCLickListener(onClickListener)
         create()
     }
 
     private lateinit var data: ChipsWidgetData
     private fun setData(chipsData: ChipsWidgetData){
         this.data = chipsData
+    }
+
+    private lateinit var onClickListener: ChipsWidgetOnClickListener
+    private fun setOnCLickListener(onClickListener: ChipsWidgetOnClickListener){
+        this.onClickListener = onClickListener
     }
 
     private fun create() {
@@ -59,6 +65,10 @@ class ChipsWidget : LinearLayout {
                     binding.chips.removeView(chip)
                 }
 
+                chip.setOnClickListener {
+                    onClickListener.onClick(chipsItem)
+                }
+
                 binding.chips.addView(chip)
             }
 
@@ -71,5 +81,10 @@ data class ChipsItem(
 )
 
 data class ChipsWidgetData(
-    var chips: List<ChipsItem>? = null
+    var chips: List<ChipsItem>? = null,
+    var onClickListener: ChipsWidgetOnClickListener? = null
 )
+
+interface ChipsWidgetOnClickListener {
+    fun onClick(item : ChipsItem)
+}

@@ -12,7 +12,10 @@ import com.capco.cineworld.data.network.api.NetworkCallListener
 import com.capco.cineworld.data.network.models.articles.ArticlesData
 import com.capco.cineworld.data.network.models.movie.MovieData
 import com.capco.cineworld.databinding.ActivityDetailBinding
+import com.capco.cineworld.ui.detail.articles.ArticlesAdapter
+import com.capco.cineworld.ui.detail.articles.ArticlesOnClickListener
 import com.capco.cineworld.utils.startFlipsActivity
+import com.capco.cineworld.utils.startGenreActivity
 import com.capco.cineworld.utils.startImageActivity
 import com.capco.support.images.loadImage
 import com.capco.support.views.hide
@@ -21,7 +24,9 @@ import com.capco.widgets.R
 import com.capco.widgets.alerts.AlertCallbacks
 import com.capco.widgets.alerts.noInternetAlert
 import com.capco.widgets.alerts.somethingWentWrongAlert
+import com.capco.widgets.chips.ChipsItem
 import com.capco.widgets.chips.ChipsWidgetData
+import com.capco.widgets.chips.ChipsWidgetOnClickListener
 import com.capco.widgets.flips.FlipsItem
 import com.capco.widgets.flips.FlipsWidgetData
 import com.github.ybq.android.spinkit.sprite.Sprite
@@ -100,7 +105,14 @@ class DetailActivity : AppCompatActivity(), NetworkCallListener {
                     }
                 }
                 movieData.getGenres()?.let {
-                    binding.genres.construct(ChipsWidgetData(chips = it))
+                    binding.genres.construct(
+                        ChipsWidgetData(chips = it),
+                        object : ChipsWidgetOnClickListener {
+                            override fun onClick(item: ChipsItem) {
+                                item.title?.let { it1 -> startGenreActivity(it1) }
+                            }
+                        }
+                    )
                 }
 
                 movieData.getTitle()?.let {

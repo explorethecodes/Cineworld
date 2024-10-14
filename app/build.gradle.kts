@@ -38,6 +38,10 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
 
@@ -47,22 +51,32 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
+
+    //Android Test
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+
+    //Test
+    // For JUnit and Mockito core functionality
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito:mockito-core:4.3.1")
+    // Core testing for LiveData and ViewModel tests
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
 
     implementation(project(":support"))
     implementation(project(":widgets"))
 
     //Compose and Navigation
-    implementation("androidx.compose.ui:ui:1.7.2")
+    implementation("androidx.compose.ui:ui:1.7.3")
     implementation("androidx.compose.material3:material3:1.3.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3")
     implementation("androidx.activity:activity-compose:1.9.2")
-    implementation("androidx.navigation:navigation-compose:2.8.1")
+    implementation("androidx.navigation:navigation-compose:2.8.2")
 
     //Hilt Dependency Injection
     implementation("com.google.dagger:hilt-android:2.51.1")
+    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     kapt("com.google.dagger:hilt-compiler:2.51.1")
 
     //Kotlin Coroutines
