@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -54,18 +55,19 @@ class GenreActivity : ComponentActivity() {
     @Composable
     fun ImageWithText() {
         Column(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .padding(20.dp)
+                .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            // Text
             Text(
-                text = genre,
+                text = "Movies related to $genre",
                 style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier
+                    .padding(10.dp)
             )
 
-            // Image
             Image(
                 painter = painterResource(id = com.capco.widgets.R.drawable.ic_no_internet), // Replace with your image resource
                 contentDescription = "My Image",
@@ -74,6 +76,14 @@ class GenreActivity : ComponentActivity() {
                     .padding(16.dp),
                 contentScale = ContentScale.Crop
             )
+
+            Text(
+                text = "Sorry, the page is under Maintanance !",
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier
+                    .padding(10.dp)
+            )
+
         }
     }
 

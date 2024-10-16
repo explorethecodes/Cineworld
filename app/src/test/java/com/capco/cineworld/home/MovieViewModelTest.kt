@@ -64,8 +64,7 @@ class HomeViewModelTest {
                 TODO("Not yet implemented")
             }
         }
-        `when`(repository.requestTrendingMovies(MoviesRequest(),networkCallListener){}).thenReturn(Unit)
-
+        //`when`(repository.requestTrendingMovies(MoviesRequest(),networkCallListener){}).thenReturn(mockMoviesList)
 
         // Act: Trigger the fetchTrendingMovies function
         movieViewModel.requestMoviesTrending(MoviesRequest())
