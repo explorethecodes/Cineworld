@@ -1,13 +1,13 @@
-package com.capco.cineworld.ui.detail.articles
+package com.capco.widgets.articles
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.capco.cineworld.R
-import com.capco.cineworld.databinding.AdapterArticlesBinding
 import com.capco.support.images.loadImage
+import com.capco.widgets.R
+import com.capco.widgets.databinding.AdapterArticlesBinding
 import com.capco.widgets.flips.FlipsItem
 import kotlin.collections.ArrayList
 

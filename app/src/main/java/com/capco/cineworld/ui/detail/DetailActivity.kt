@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.view.*
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.capco.cineworld.data.network.CallInfo
 import com.capco.cineworld.data.network.NoInternetException
 import com.capco.cineworld.data.network.api.NetworkCallListener
 import com.capco.cineworld.data.network.models.articles.ArticlesData
 import com.capco.cineworld.data.network.models.movie.MovieData
 import com.capco.cineworld.databinding.ActivityDetailBinding
-import com.capco.cineworld.ui.detail.articles.ArticlesAdapter
-import com.capco.cineworld.ui.detail.articles.ArticlesOnClickListener
 import com.capco.cineworld.utils.startFlipsActivity
 import com.capco.cineworld.utils.startGenreActivity
 import com.capco.cineworld.utils.startImageActivity
@@ -24,6 +21,8 @@ import com.capco.widgets.R
 import com.capco.widgets.alerts.AlertCallbacks
 import com.capco.widgets.alerts.noInternetAlert
 import com.capco.widgets.alerts.somethingWentWrongAlert
+import com.capco.widgets.articles.ArticlesWidgetData
+import com.capco.widgets.articles.ArticlesWidgetOnClickListener
 import com.capco.widgets.chips.ChipsItem
 import com.capco.widgets.chips.ChipsWidgetData
 import com.capco.widgets.chips.ChipsWidgetOnClickListener
@@ -40,10 +39,6 @@ class DetailActivity : AppCompatActivity(), NetworkCallListener {
     private val viewModel: DetailViewModel by viewModels()
 
     private lateinit var binding : ActivityDetailBinding
-
-    companion object{
-        const val ARTICLES_ADAPTER_MAX_LIMIT = 5
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -185,40 +180,22 @@ class DetailActivity : AppCompatActivity(), NetworkCallListener {
             val articlesData = ArticlesData(articles)
             if (articlesData.isSuccess()){
                 articlesData.getArticles()?.let {
-                    articlesRecyclerView(it)
+                    binding.articlesWidget.show()
+                    binding.articlesWidget.construct(
+                        ArticlesWidgetData("Related Articles",it),
+                        object : ArticlesWidgetOnClickListener {
+                            override fun onClickArticle(articlesItem: FlipsItem) {
+                                startFlipsActivity(FlipsWidgetData(it.toMutableList()),articlesItem.id)
+                            }
+
+                            override fun onClickViewMore() {
+                                startFlipsActivity(FlipsWidgetData(it.toMutableList()),null)
+                            }
+
+                        }
+                    )
                 }
             }
-        }
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    private fun articlesRecyclerView(unfilteredArticles: List<FlipsItem>) {
-        val articles = unfilteredArticles.filter { !it.title.isNullOrEmpty() and !it.description.isNullOrEmpty()}
-        binding.articlesLayout.show()
-
-        val articlesRecyclerView = binding.articles
-        val articlesAdapter = ArticlesAdapter(arrayListOf(),object : ArticlesOnClickListener {
-            override fun onClick(articlesItem: FlipsItem) {
-                startFlipsActivity(
-                    FlipsWidgetData(articles!!.toMutableList())
-                    ,articlesItem.id
-                )
-            }
-        })
-        articlesRecyclerView.apply {
-            layoutManager = LinearLayoutManager(context!!, LinearLayoutManager.VERTICAL,false)
-            adapter = articlesAdapter
-        }
-
-        articlesAdapter.setArticles(articles.take(ARTICLES_ADAPTER_MAX_LIMIT))
-
-        if (articles.size> ARTICLES_ADAPTER_MAX_LIMIT)
-            binding.viewMore.show()
-        else
-            binding.viewMore.hide()
-
-        binding.viewMore.setOnClickListener {
-            startFlipsActivity(FlipsWidgetData(articles.toMutableList()),null)
         }
     }
 

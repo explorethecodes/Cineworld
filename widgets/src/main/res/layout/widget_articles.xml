@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="data"
+            type="com.capco.widgets.articles.ArticlesWidgetData"/>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/articlesLayout"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingStart="15dp"
+            tools:text="Related Articles"
+            android:text="Related Articles"
+            android:gravity="left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/grey_20"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/articles"
+            android:layout_marginTop="15dp"
+            tools:listitem="@layout/adapter_articles"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/viewMore"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="2dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/grey_900">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:paddingStart="15dp"
+                    android:text="View More"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/grey_20"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <ImageView
+                    android:padding="5dp"
+                    android:elevation="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/grey_20"
+                    android:backgroundTint="@color/overlay_dark_90"
+                    android:importantForAccessibility="no" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
