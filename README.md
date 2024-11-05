@@ -27,13 +27,13 @@ The main app screens includes,
 `Zoom Image` uses a third party library for displaying and zooming in the selected images
 <br> whereas `Article Flips` View show the articles in a short flipping page format.
 
-![App Screenshot](files/images/wireframe.jpg)
+![App Screenshot](docs/images/wireframe.jpg)
 
 ## Video Demo
 [![Video Title](https://img.youtube.com/vi/K6ZBg12dNVE/0.jpg)](https://www.youtube.com/watch?v=K6ZBg12dNVE)
 
 ## Screenshots
-![App Screenshot](files/images/screenshots.jpg)
+![App Screenshot](docs/images/screenshots.jpg)
 
 ## Code Design & Structure
 The code is designed by following the SOLID principles and MVVM design pattern to maintain a clean code architecture. Code separation is maintained using modular approach by creating multiple modules and packages for corresponding features or purpose.
@@ -66,9 +66,9 @@ SOLID principles with clean code architecture
 
 Support Modules (Modular Approach)
 ```
-![MVVM_1](files/images/mvvm1.webp)
+![MVVM_1](docs/images/mvvm1.webp)
 
-![MVVM_2](files/images/mvvm2.png)
+![MVVM_2](docs/images/mvvm2.png)
 
 ## Public APIs Used
 ### The Movie Data Base (TMDB)
